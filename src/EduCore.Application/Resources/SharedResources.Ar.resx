@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Created" xml:space="preserve">
+    <value>تمت الاضافة بنجاح</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>تم الحذف بنجاح</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>غير متوفر</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>تمت العملية بنجاح</value>
+  </data>
+  <data name="UnAuthorized" xml:space="preserve">
+    <value>أنت غير مصرح لك بالوصول الي ذلك المصدر</value>
+  </data>
+  <data name="BadRequest" xml:space="preserve">
+    <value>الطلب غير صالح</value>
+  </data>
+  <data name="UnprocessableEntity" xml:space="preserve">
+    <value>يوجد مشاكل في صيغة الداتا او نوعها عن المطلوب</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>هذا الحقل مطلوب</value>
+  </data>
+  <data name="NotEmpty" xml:space="preserve">
+    <value>لا يمكن ترك هذا الحقل فارغا</value>
+  </data>
+  <data name="EmailAlreadyExists" xml:space="preserve">
+    <value>هذا البريد الالكتروني موجود بالفعل</value>
+  </data>
+  <data name="FailedToCreateUser" xml:space="preserve">
+    <value>فشل في انشاء المستخدم</value>
+  </data>
+  <data name="TryToRegisterAgain" xml:space="preserve">
+    <value>حاول التسجيل مرة اخري</value>
+  </data>
+  <data name="PasswordNotMatchConfirmPassword" xml:space="preserve">
+    <value>كلمة المرور وتأكيد كلمة المرور غير متطابقان</value>
+  </data>
+  <data name="UserNameAlreadyExists" xml:space="preserve">
+    <value>اسم المستخدم موجود بالفعل</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>هذا المستخدم غير موجود</value>
+  </data>
+  <data name="FailedToConfirmEmail" xml:space="preserve">
+    <value>فشل في تأكيد البريد الالكتروني</value>
+  </data>
+  <data name="EmailOrPasswordIncorrect" xml:space="preserve">
+    <value>البريد الالكتروني او كلمة السر غير صحيحة</value>
+  </data>
+  <data name="EmailNotConfirmed" xml:space="preserve">
+    <value>البريد الالكتروني غير مؤكد</value>
+  </data>
+  <data name="InvalidToken" xml:space="preserve">
+    <value>هذا الرمز غير صالح</value>
+  </data>
+  <data name="InactiveToken" xml:space="preserve">
+    <value>هذا الرمز غير مفعل</value>
+  </data>
+  <data name="FailedToSendResetPassword" xml:space="preserve">
+    <value>حدث خطأ في ارسال الكود</value>
+  </data>
+  <data name="InvalidCode" xml:space="preserve">
+    <value>هذا الكود غير صحيح</value>
+  </data>
+  <data name="FailedToResetPassword" xml:space="preserve">
+    <value>فشل في انشاء كلمة المرور</value>
+  </data>
+  <data name="FailedToUpdateUser" xml:space="preserve">
+    <value>فشل في تعديل المستخدم</value>
+  </data>
+  <data name="FailedToDeleteUser" xml:space="preserve">
+    <value>فشل في حذف المستخدم</value>
+  </data>
+  <data name="FailedToChangePassword" xml:space="preserve">
+    <value>فشل في تغيير كلمة المرور</value>
+  </data>
+  <data name="FailedToAddRole" xml:space="preserve">
+    <value>فشل في اضافة الصلاحية</value>
+  </data>
+  <data name="RoleAlreadyExists" xml:space="preserve">
+    <value>هذه الصلاحية موجودة بالفعل</value>
+  </data>
+  <data name="FailedToEditRole" xml:space="preserve">
+    <value>فشل في تعديل الصلاحية</value>
+  </data>
+  <data name="FailedToUpdateUserRoles" xml:space="preserve">
+    <value>فشل في تعديل صلاحيات المستخدم</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>فشل في اتمام العملية</value>
+  </data>
+  <data name="CategoryAlreadyExists" xml:space="preserve">
+    <value>هذا التصنيف موجود بالفعل</value>
+  </data>
+  <data name="MustBePositive" xml:space="preserve">
+    <value>لا يمكن أن تكون قيمة سالبة</value>
+  </data>
+  <data name="OrderIsAlreadyExists" xml:space="preserve">
+    <value>هذا الترتيب موجود بالفعل</value>
+  </data>
+  <data name="TitleIsAlreadyExists" xml:space="preserve">
+    <value>عنوان هذا السكشن موجود بالفعل</value>
+  </data>
+  <data name="FailedToUploadFile" xml:space="preserve">
+    <value>فشل في رفع الملف</value>
+  </data>
+  <data name="FailedToDeleteFile" xml:space="preserve">
+    <value>فشل في مسح الملف</value>
+  </data>
+  <data name="CourseNotFound" xml:space="preserve">
+    <value>هذه الدورة غير موجوده</value>
+  </data>
+  <data name="CourseAlreadyExistsInCart" xml:space="preserve">
+    <value>هذه الدورة بالفعل تمت اضافتها للسلة</value>
+  </data>
+  <data name="NoActiveCartFound" xml:space="preserve">
+    <value>لا توجد سلة حالية للعميل</value>
+  </data>
+  <data name="CourseNotFoundInCart" xml:space="preserve">
+    <value>هذه الدورة غير موجوده في السلة</value>
+  </data>
+  <data name="EmptyCart" xml:space="preserve">
+    <value>السلة فارغة</value>
+  </data>
+  <data name="UserIsAlreadyInstructor" xml:space="preserve">
+    <value>هذا المستخدم بالفعل معلم</value>
+  </data>
+  <data name="Forbidden" xml:space="preserve">
+    <value>غير مصرح لك بالوصول لذلك</value>
+  </data>
+  <data name="UserNotEnrolledInCourse" xml:space="preserve">
+    <value>المستخدم غير مشترك بالدورة</value>
+  </data>
+  <data name="UserNotCompletedFullCourse" xml:space="preserve">
+    <value>المستخدم لم يكمل الدورة</value>
+  </data>
+  <data name="RatingMustBeBetween1And5" xml:space="preserve">
+    <value>التقييم يجب ان يكون من 1 الي 5</value>
+  </data>
+  <data name="YouAlreadyGiveFeedback" xml:space="preserve">
+    <value>لقد قمت بالتقييم بالفعل</value>
+  </data>
+  <data name="CartNotFound" xml:space="preserve">
+    <value>السلة غير موجوده</value>
+  </data>
+  <data name="AlreadyEnrolledInCourse" xml:space="preserve">
+    <value>انت بالفعل مشترك في هذه الدورة</value>
+  </data>
+  <data name="NoProfilePictureExists" xml:space="preserve">
+    <value>لا توجد صورة شخصية بالفعل</value>
+  </data>
+  <data name="UnauthorizedCourseAccess" xml:space="preserve">
+    <value>ليس لديك الصلاحية لتعديل هذه الدورة</value>
+  </data>
+  <data name="NewPasswordSameAsCurrentPassword" xml:space="preserve">
+    <value>يجب أن تكون كلمة السر الجديدة مختلفة</value>
+  </data>
+</root>

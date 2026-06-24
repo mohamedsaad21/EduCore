@@ -1,0 +1,186 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\EduCore.Domain\EduCore.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Mapping\Authentication\Commands\" />
+		<Folder Include="Mapping\Authentication\Queries\" />
+		<Folder Include="Mapping\Content\Commands\" />
+		<Folder Include="Mapping\Orders\Commands\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="16.1.1" />
+		<PackageReference Include="FluentValidation" Version="12.0.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+		<PackageReference Include="Google.Apis.Auth" Version="1.75.0" />
+		<PackageReference Include="MediatR" Version="13.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="10.0.0" />
+		<PackageReference Include="QuestPDF" Version="2026.2.4" />
+		<PackageReference Include="Serilog" Version="4.3.0" />
+		<PackageReference Include="Stripe.net" Version="51.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\OFL.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-ThinItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-Thin.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-SemiBoldItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-SemiBold.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-Regular.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-MediumItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-Medium.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-LightItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-Light.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-Italic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-ExtraLightItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-ExtraLight.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-ExtraBoldItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-ExtraBold.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-BoldItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-Bold.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-BlackItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="C:\Users\khale\.nuget\packages\questpdf\2025.12.0-alpha4\buildTransitive\..\LatoFont\Lato-Black.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\OFL.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-ThinItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-Thin.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-SemiBoldItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-SemiBold.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-Regular.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-MediumItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-Medium.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-LightItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-Light.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-Italic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-ExtraLightItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-ExtraLight.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-ExtraBoldItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-ExtraBold.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-BoldItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-Bold.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-BlackItalic.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\khale\.nuget\packages\questpdf\2026.2.4\buildTransitive\..\LatoFont\Lato-Black.ttf" />
+	</ItemGroup>
+
+</Project>

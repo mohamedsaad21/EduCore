@@ -1,0 +1,22 @@
+﻿using EduCore.Core.Resources;
+using FluentValidation;
+using Microsoft.Extensions.Localization;
+
+namespace EduCore.Application.Features.Authentication.Commands.SendResetPassword;
+
+public class SendResetPasswordCommandValidator : AbstractValidator<SendResetPasswordCommand>
+{
+    private readonly IStringLocalizer<SharedResources> _stringLocalizer;
+
+    public SendResetPasswordCommandValidator(IStringLocalizer<SharedResources> stringLocalizer)
+    {
+        _stringLocalizer = stringLocalizer;
+        ApplyValidationRules();
+    }
+
+    public void ApplyValidationRules()
+    {
+        RuleFor(x => x.Email).NotNull().WithMessage(_stringLocalizer[SharedResourcesKeys.Required])
+            .NotEmpty().WithMessage(_stringLocalizer[SharedResourcesKeys.NotEmpty]);
+    }
+}
