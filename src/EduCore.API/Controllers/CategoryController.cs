@@ -15,9 +15,9 @@ public class CategoryController : AppControllerBase
 {
 
     [HttpGet(Router.CategoryRouting.List)]
-    public async Task<IActionResult> GetCategories()
+    public async Task<IActionResult> GetCategories([FromQuery] GetCategoriesPaginatedListQuery query)
     {
-        return ToActionResult(await Mediator.Send(new GetCategoriesListQuery()));
+        return ToActionResult(await Mediator.Send(query));
     }
 
     [HttpGet(Router.CategoryRouting.GetById)]

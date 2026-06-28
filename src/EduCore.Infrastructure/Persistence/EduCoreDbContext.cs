@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EduCore.Infrastructure.Persistence;
 
-public class ApplicationDbContext : IdentityDbContext<User, Role, Guid>
+public class EduCoreDbContext : IdentityDbContext<User, Role, Guid>
 {
     private readonly IEncryptionProvider _encryptionProvider;
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+    public EduCoreDbContext(DbContextOptions<EduCoreDbContext> options) : base(options)
     {
         _encryptionProvider = new GenerateEncryptionProvider("02D08259E75F463A9D492B1FE4A22E3C");
     }

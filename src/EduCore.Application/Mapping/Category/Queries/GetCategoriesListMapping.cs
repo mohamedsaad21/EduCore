@@ -7,7 +7,7 @@ public partial class CategoryProfile
 {
     public void GetCategoriesListMapping()
     {
-        CreateMap<CourseCategory, GetCategoriesListResponse>()
+        CreateMap<CourseCategory, GetCategoriesPaginatedListResponse>()
             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Localize(src.NameAr, src.NameEn)));
     }
 }

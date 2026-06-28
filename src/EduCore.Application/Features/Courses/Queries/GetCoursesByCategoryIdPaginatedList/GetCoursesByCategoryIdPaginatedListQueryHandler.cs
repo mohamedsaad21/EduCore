@@ -21,6 +21,11 @@ public sealed class GetCoursesByCategoryIdPaginatedListQueryHandler(ICourseServi
     e => new GetCoursesByCategoryIdPaginatedListResponse(e.Id, e.Title, e.Description, e.Thumbnail, e.Price, e.Status, e.Instructor.FullName, e.Instructor.ProfilePictureUrl, e.CreatedAt, e.AverageRating, e.RatingCount, e.NoOfStudents, e.UpdatedAt);
         var FilterQuery = courseService.GetPaginatedListByCategoryIdAsync(request.CategoryId, request.OrderBy, request.Search);
         var paginatedList = await FilterQuery.Select(expression).ToPaginatedListAsync(request.pageNumber, request.pageSize);
+        paginatedList.Meta = new
+        {
+            CategoryName = category.Localize(category.NameAr, category.NameEn),
+            CategoryThumbnailUrl = category.ThumbnailUrl
+        };
         return paginatedList;
     }
 }

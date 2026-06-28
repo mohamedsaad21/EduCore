@@ -5,8 +5,8 @@ namespace EduCore.Infrastructure.Persistence.Repositories;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : class
 {
-    private readonly ApplicationDbContext _dbContext;
-    public GenericRepository(ApplicationDbContext dbContext)
+    private readonly EduCoreDbContext _dbContext;
+    public GenericRepository(EduCoreDbContext dbContext)
     {
         _dbContext = dbContext;
     }

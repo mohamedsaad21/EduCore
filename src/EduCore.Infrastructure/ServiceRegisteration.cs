@@ -37,7 +37,7 @@ public static class ServiceRegisteration
             option.User.RequireUniqueEmail = true;
             option.SignIn.RequireConfirmedEmail = true;
 
-        }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+        }).AddEntityFrameworkStores<EduCoreDbContext>().AddDefaultTokenProviders();
 
         //JWT Authentication
         var jwtSettings = new JwtSettings();
