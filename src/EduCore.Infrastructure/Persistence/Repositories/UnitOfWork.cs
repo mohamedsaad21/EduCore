@@ -5,7 +5,7 @@ namespace EduCore.Infrastructure.Persistence.Repositories;
 
 public class UnitOfWork : IUnitOfWork
 {
-    private readonly ApplicationDbContext _dbContext;
+    private readonly EduCoreDbContext _dbContext;
     public IGenericRepository<Cart> Carts { get; private set; }
     public IGenericRepository<CourseCategory> Categories { get; private set; }
     public IGenericRepository<Course> Courses { get; private set; }
@@ -16,7 +16,7 @@ public class UnitOfWork : IUnitOfWork
     public IGenericRepository<SectionContent> Contents { get; private set; }
     public IGenericRepository<UserCourseProgress> UserCourseProgresses { get; private set; }
 
-    public UnitOfWork(ApplicationDbContext dbContext)
+    public UnitOfWork(EduCoreDbContext dbContext)
     {
         _dbContext = dbContext;
         Carts = new GenericRepository<Cart>(dbContext);

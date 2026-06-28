@@ -9,7 +9,7 @@ public class AuthorizationService : IAuthorizationService
 {
     private readonly RoleManager<Role> _roleManager;
 
-    public AuthorizationService(RoleManager<Role> roleManager, UserManager<User> userManager, ApplicationDbContext dbContext)
+    public AuthorizationService(RoleManager<Role> roleManager, UserManager<User> userManager, EduCoreDbContext dbContext)
     {
         _roleManager = roleManager;
     }
