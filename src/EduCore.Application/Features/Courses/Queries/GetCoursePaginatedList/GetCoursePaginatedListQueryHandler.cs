@@ -14,7 +14,7 @@ public sealed class GetCoursePaginatedListQueryHandler(IStringLocalizer<SharedRe
     public async Task<Result<PaginatedResult<GetCoursePaginatedListResponse>>> Handle(GetCoursePaginatedListQuery request, CancellationToken cancellationToken)
     {
         Expression<Func<Course, GetCoursePaginatedListResponse>> expression =
-    e => new GetCoursePaginatedListResponse(e.Id, e.Title, e.Description, e.Thumbnail, e.Price, e.Status, e.CreatedAt, e.CategoryId, e.Instructor.FullName, e.Instructor.ProfilePictureUrl, e.AverageRating, e.RatingCount, e.NoOfStudents, e.UpdatedAt, e.Category);
+    e => new GetCoursePaginatedListResponse(e.Id, e.Title, e.Description, e.ThumbnailUrl, e.Price, e.Status.ToString(), e.CreatedAt, e.CategoryId, e.Instructor.FullName, e.Instructor.ProfilePictureUrl, e.AverageRating, e.RatingCount, e.NoOfStudents, e.UpdatedAt, e.Category);
         var FilterQuery = courseService.GetPaginatedListAsync(request.OrderBy, request.Search);
         var paginatedList = await FilterQuery.Select(expression).ToPaginatedListAsync(request.pageNumber, request.pageSize);
         return paginatedList;

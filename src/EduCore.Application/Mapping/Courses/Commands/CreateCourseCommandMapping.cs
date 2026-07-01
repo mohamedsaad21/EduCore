@@ -8,6 +8,6 @@ public partial class CourseProfile
     public void CreateCourseCommandMapping()
     {
         CreateMap<AddCourseCommand, Course>()
-            .ForMember(dest => dest.Thumbnail, opt => opt.Ignore());
+            .ForMember(dest => dest.ThumbnailUrl, opt => opt.Ignore());
     }
 }

@@ -20,7 +20,7 @@ public sealed class GetCoursesByInstructorIdPaginatedListQueryHandler(UserManage
             return Errors.InstructorNotFound;
 
         Expression<Func<Course, GetCoursesByInstructorIdPaginatedListResponse>> expression =
-e => new GetCoursesByInstructorIdPaginatedListResponse(e.Id, e.Title, e.Description, e.Thumbnail, e.Price, e.Status, e.CreatedAt, e.CategoryId, e.Instructor.FullName, e.Instructor.ProfilePictureUrl, e.AverageRating, e.RatingCount, e.NoOfStudents, e.UpdatedAt, e.Category);
+e => new GetCoursesByInstructorIdPaginatedListResponse(e.Id, e.Title, e.Description, e.ThumbnailUrl, e.Price, e.Status.ToString(), e.CreatedAt, e.CategoryId, e.Instructor.FullName, e.Instructor.ProfilePictureUrl, e.AverageRating, e.RatingCount, e.NoOfStudents, e.UpdatedAt, e.Category);
         var FilterQuery = courseService.GetPaginatedListByInstructorIdAsync(request.InstructorId, request.OrderBy, request.Search);
         var paginatedList = await FilterQuery.Select(expression).ToPaginatedListAsync(request.pageNumber, request.pageSize);
         return paginatedList;

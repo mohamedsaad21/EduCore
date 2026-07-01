@@ -9,6 +9,7 @@ public sealed record AddCourseCommand
         string Title,
         string Description,
         IFormFile Thumbnail,
+        int? TotalHours,
         decimal Price,
         int DiscountPercentage,
         Guid CategoryId

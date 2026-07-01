@@ -5,6 +5,7 @@ using EduCore.Infrastructure.Services;
 using EduCore.Service.AuthServices.Implementations;
 using EduCore.Service.Implementation;
 using EduCore.Services.Implementation;
+using Fawaterak.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace EduCore.Infrastructure;
@@ -28,7 +29,7 @@ public static class ModuleInfrastructureDependencies
         services.AddScoped<IEnrollmentService, EnrollmentService>();
         services.AddScoped<ICourseProgressService, CourseProgressService>();
         services.AddScoped<ICertificateService, CertificateService>();
-        services.AddScoped<IPaymentService, PaymentService>();
+        services.AddScoped<IFawaterakPaymentService, FawaterakPaymentService>();
         return services;
     }
 }

@@ -16,7 +16,7 @@ public sealed class GetUserEnrollmentsPaginatedListQueryHandler(IUnitOfWork unit
 
         var FilterQuery = enrollments
             .Join(courses, e => e.CourseId, c => c.Id, (e, c) =>
-            new GetUserEnrollmentsPaginatedListResponse { UserId = userId, CourseId = c.Id, Title = c.Title, Thumbnail = c.Thumbnail!, InstructorName = c.Instructor.FullName, EnrolledAt = e.EnrolledAt });
+            new GetUserEnrollmentsPaginatedListResponse { UserId = userId, CourseId = c.Id, Title = c.Title, Thumbnail = c.ThumbnailUrl!, InstructorName = c.Instructor.FullName, EnrolledAt = e.EnrolledAt });
 
         var PaginatedList = await FilterQuery.ToPaginatedListAsync(request.PageNumber, request.PageSize);
         return PaginatedList;

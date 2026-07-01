@@ -12,11 +12,11 @@ public class Course : DatedEntity
     }
     public string Title { get; set; }
     public string Description { get; set; }
-    public string? Thumbnail { get; set; }
+    public string? ThumbnailUrl { get; set; }
     public string? ThumbnailPublicId { get; set; }
     public decimal Price { get; set; }
     public int DiscountPercentage { get; set; }
-    public string Status { get; set; } = CourseStatus.Pending.ToString();
+    public CourseStatus Status { get; set; } = CourseStatus.Pending;
     public int? TotalHours { get; set; }
     public double? AverageRating { get; set; }
     public int? RatingCount  { get; set; }

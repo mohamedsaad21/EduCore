@@ -2,7 +2,6 @@
 using EduCore.Application.Abstracts;
 using EduCore.Application.Bases;
 using EduCore.Domain.Entities;
-using EduCore.Domain.Enums;
 using EduCore.Domain.Interfaces;
 using MediatR;
 
@@ -22,7 +21,7 @@ public sealed class AddCourseCommandHandler(IUnitOfWork unitOfWork, IMapper mapp
         var imgCreateResult = await fileService.UploadAsync(request.Thumbnail);
         if (imgCreateResult.Message == "NoFile") return Errors.NoFile;
         if (imgCreateResult.Message == "FailedToUploadImage") return Errors.FailedToUploadFile;
-        course.Thumbnail = imgCreateResult.Url;
+        course.ThumbnailUrl = imgCreateResult.Url;
         course.ThumbnailPublicId = imgCreateResult.PublicId;
         await unitOfWork.SaveChangesAsync();
         return course.Id;

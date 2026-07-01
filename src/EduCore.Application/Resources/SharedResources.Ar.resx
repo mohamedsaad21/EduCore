@@ -276,4 +276,10 @@
   <data name="NewPasswordSameAsCurrentPassword" xml:space="preserve">
     <value>يجب أن تكون كلمة السر الجديدة مختلفة</value>
   </data>
+  <data name="MinLength100Character" xml:space="preserve">
+    <value>يجب أن يحتوي {PropertyName} على {MinLength} حرف على الأقل.</value>
+  </data>
+  <data name="MaxLength500Character" xml:space="preserve">
+    <value>لا يمكن أن يتجاوز حقل {PropertyName} أكثر من {MaxLength} حرف.</value>
+  </data>
 </root>

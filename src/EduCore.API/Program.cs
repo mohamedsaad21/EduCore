@@ -33,6 +33,7 @@ builder.Services.AddDbContext<EduCoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")); 
 });
 
+builder.Services.AddHttpClient();
 #region CORS
 builder.Services.AddCors();
 
