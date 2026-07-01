@@ -20,7 +20,7 @@ public sealed class DeleteCourseCommandHandler(IUnitOfWork unitOfWork, ICurrentU
         if (course.InstructorId != currentInstructorId)
             return Errors.UnauthorizedCourseAccess;
 
-        if (course.Thumbnail != null)
+        if (course.ThumbnailUrl != null)
         {
             await fileService.DeleteAsync(course.ThumbnailPublicId, "Image");
         }

@@ -4,4 +4,8 @@ using MediatR;
 
 namespace EduCore.Application.Features.Payment.Commands.CreateOrUpdatePaymentIntent;
 
-public sealed record CreateOrUpdatePaymentIntentCommand(Guid CartId) : IRequest<Result<GetCartByCustomerIdResponse>>;
+public sealed record CreateOrUpdatePaymentIntentCommand
+    (
+        Guid CartId, 
+        int PaymentMethodId
+    ) : IRequest<Result<GetCartByCustomerIdResponse>>;

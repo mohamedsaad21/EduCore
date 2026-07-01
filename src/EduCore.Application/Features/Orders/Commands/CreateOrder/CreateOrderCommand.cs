@@ -3,4 +3,7 @@ using MediatR;
 
 namespace EduCore.Application.Features.Orders.Commands.CreateOrder;
 
-public sealed record CreateOrderCommand(Guid CartId) : IRequest<Result<Guid>>;
+public sealed record CreateOrderCommand
+    (
+        Guid CartId
+    ) : IRequest<Result<Guid>>;

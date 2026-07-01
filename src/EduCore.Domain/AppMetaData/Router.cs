@@ -133,6 +133,7 @@ public static class Router
     public static class PaymentRouting
     {
         public const string prefix = Rule + "/Payment";
-        public const string CreatePaymentIntent = Rule + "/CreatePaymentIntent/{CartId}";
+        public const string GetPaymentMethods = prefix + "/Get-Payment-Methods";
+        public const string CreatePaymentIntent = prefix + "/CreatePaymentIntent/{CartId}";
     }
     }

@@ -60,7 +60,7 @@
         public const string NoProfilePictureExists = "NoProfilePictureExists";
         public const string UnauthorizedCourseAccess = "UnauthorizedCourseAccess";
         public const string NewPasswordSameAsCurrentPassword = "NewPasswordSameAsCurrentPassword";
-
-
+        public const string MinLength100Character = "MinLength100Character";
+        public const string MaxLength500Character = "MaxLength500Character";
     }
 }

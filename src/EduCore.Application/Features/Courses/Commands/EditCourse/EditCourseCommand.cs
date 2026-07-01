@@ -9,7 +9,8 @@ public sealed record EditCourseCommand
         Guid Id,
         string Title, 
         string Description, 
-        IFormFile? Thumbnail, 
+        IFormFile? Thumbnail,
+        int? TotalHours,
         decimal Price, 
         int DiscountPercentage, 
         int CategoryId

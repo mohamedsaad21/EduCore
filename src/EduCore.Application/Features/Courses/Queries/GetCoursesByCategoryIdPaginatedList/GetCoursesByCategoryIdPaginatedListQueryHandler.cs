@@ -18,7 +18,7 @@ public sealed class GetCoursesByCategoryIdPaginatedListQueryHandler(ICourseServi
             return Errors.CategoryNotFound;
 
         Expression<Func<Course, GetCoursesByCategoryIdPaginatedListResponse>> expression =
-    e => new GetCoursesByCategoryIdPaginatedListResponse(e.Id, e.Title, e.Description, e.Thumbnail, e.Price, e.Status, e.Instructor.FullName, e.Instructor.ProfilePictureUrl, e.CreatedAt, e.AverageRating, e.RatingCount, e.NoOfStudents, e.UpdatedAt);
+    e => new GetCoursesByCategoryIdPaginatedListResponse(e.Id, e.Title, e.Description, e.ThumbnailUrl, e.Price, e.Status.ToString(), e.Instructor.FullName, e.Instructor.ProfilePictureUrl, e.CreatedAt, e.AverageRating, e.RatingCount, e.NoOfStudents, e.UpdatedAt);
         var FilterQuery = courseService.GetPaginatedListByCategoryIdAsync(request.CategoryId, request.OrderBy, request.Search);
         var paginatedList = await FilterQuery.Select(expression).ToPaginatedListAsync(request.pageNumber, request.pageSize);
         paginatedList.Meta = new

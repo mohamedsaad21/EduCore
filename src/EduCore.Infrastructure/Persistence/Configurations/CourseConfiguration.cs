@@ -12,7 +12,7 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
         builder.Property(c => c.Title).IsRequired().HasMaxLength(100);
         builder.Property(c => c.Description).IsRequired().HasMaxLength(500);
         builder.Property(c => c.Price).IsRequired();
-        builder.Property(c => c.Status).IsRequired();
+        builder.Property(c => c.Status).HasConversion<string>();
 
         builder.HasOne(c => c.Category).WithMany(c => c.Courses).HasForeignKey(c => c.CategoryId).OnDelete(DeleteBehavior.Restrict);
         builder.HasMany(c => c.Sections).WithOne(s => s.Course).HasForeignKey(s => s.CourseId);

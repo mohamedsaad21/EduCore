@@ -46,11 +46,15 @@ public static class ServiceRegisteration
         var emailSettings = new EmailSettings();
         configuration.GetSection(nameof(emailSettings)).Bind(emailSettings);
 
+        var fawaterakSettings = new FawaterakSettings();
+        configuration.GetSection(nameof(fawaterakSettings)).Bind(fawaterakSettings);
+
         var cloudinarySettings = new CloudinarySettings();
         configuration.GetSection(nameof(cloudinarySettings)).Bind(cloudinarySettings);
 
         services.AddSingleton(jwtSettings);
         services.AddSingleton(emailSettings);
+        services.AddSingleton(fawaterakSettings);
         services.AddSingleton(cloudinarySettings);
 
         var cloudinary = new Cloudinary(cloudinarySettings.Url);
