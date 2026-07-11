@@ -1,0 +1,13 @@
+﻿using EduCore.Core.Features.Courses.Commands.AddCourse;
+using EduCore.Domain.Entities;
+
+namespace EduCore.Application.Mapping.Courses;
+
+public partial class CourseProfile
+{
+    public void CreateCourseCommandMapping()
+    {
+        CreateMap<AddCourseCommand, Course>()
+            .ForMember(dest => dest.ThumbnailUrl, opt => opt.Ignore());
+    }
+}

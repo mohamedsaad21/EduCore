@@ -1,0 +1,34 @@
+﻿using EduCore.Domain.Entities;
+using EduCore.Domain.Interfaces;
+
+namespace EduCore.Infrastructure.Persistence.Repositories;
+
+public class UnitOfWork : IUnitOfWork
+{
+    private readonly EduCoreDbContext _dbContext;
+    public IGenericRepository<Basket> Baskets { get; private set; }
+    public IGenericRepository<CourseCategory> Categories { get; private set; }
+    public IGenericRepository<Course> Courses { get; private set; }
+    public IGenericRepository<Payment> Payments { get; private set; }
+    public IGenericRepository<Enrollment> Enrollments { get; private set; }
+    public IGenericRepository<Feedback> Feedbacks { get; private set; }
+    public IGenericRepository<Section> Sections { get; private set; }
+    public IGenericRepository<SectionContent> Contents { get; private set; }
+    public IGenericRepository<UserCourseProgress> UserCourseProgresses { get; private set; }
+
+    public UnitOfWork(EduCoreDbContext dbContext)
+    {
+        _dbContext = dbContext;
+        Baskets = new GenericRepository<Basket>(dbContext);
+        Categories = new GenericRepository<CourseCategory>(dbContext);
+        Courses = new GenericRepository<Course>(dbContext);
+        Payments = new GenericRepository<Payment>(dbContext);
+        Enrollments = new GenericRepository<Enrollment>(dbContext);
+        Feedbacks = new GenericRepository<Feedback>(dbContext);
+        Sections = new GenericRepository<Section>(dbContext);
+        Contents = new GenericRepository<SectionContent>(dbContext);
+        UserCourseProgresses = new GenericRepository<UserCourseProgress>(dbContext);
+    }
+    public void Dispose() => _dbContext.Dispose();
+    public async Task<int> SaveChangesAsync() => await _dbContext.SaveChangesAsync();
+}
