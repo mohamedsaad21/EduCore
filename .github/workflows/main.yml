@@ -20,7 +20,8 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish --configuration Release --output ./src/EduCore.API/publish --runtime win-x86 
+        working-directory: ./src/EduCore.API
+        run: dotnet publish --configuration Release --output /publish --runtime win-x86 
         
       - name: Test with .NET
         working-directory: ./src/EduCore.API
