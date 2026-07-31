@@ -13,7 +13,7 @@ jobs:
           dotnet-version: 8.0
           
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore ./src/EduCore.API/EduCore.API.csproj
         
       - name: Build
         run: dotnet build --configuration Release --no-restore
