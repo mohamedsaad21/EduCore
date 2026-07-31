@@ -20,11 +20,13 @@ public sealed class AddContentCommandHandler(IUnitOfWork unitOfWork, IFileServic
         if (course == null)
             return Errors.CourseNotFound;
 
+        var uploadResult = await fileService.UploadAsync(request.File);
+
         var content = new Domain.Entities.SectionContent
         {
             Title = request.Title,
-            Url = request.Url,
-            PublicId = request.PublicId,
+            Url = uploadResult.Url,
+            PublicId = uploadResult.PublicId,
             SectionId = request.SectionId,
             ResourceType = request.ResourceType,
             Duration = request.Duration
