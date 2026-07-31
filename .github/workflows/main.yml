@@ -16,9 +16,11 @@ jobs:
         run: dotnet restore ./src/EduCore.API/EduCore.API.csproj
         
       - name: Build
+        working-directory: ./src/EduCore.API
         run: dotnet build --configuration Release --no-restore
 
       - name: Publish
+        working-directory: ./src/EduCore.API
         run: dotnet publish --configuration Release --output ./publish --runtime win-x86 
         
       - name: Test with .NET
