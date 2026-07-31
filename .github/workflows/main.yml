@@ -24,6 +24,7 @@ jobs:
         run: dotnet publish --configuration Release --output ./publish --runtime win-x86 
         
       - name: Test with .NET
+        working-directory: ./src/EduCore.API
         run: dotnet test
 
       - name: Deploy to MonsterASP.NET via WebDeploy
