@@ -2,6 +2,7 @@
 using EduCore.Infrastructure.Seeder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using SchoolProject.Core.Middleware;
 
 namespace EduCore.API.Extensions;
 
@@ -37,7 +38,7 @@ public static class WebApplicationExtensions
 
         app.MapControllers();
 
-        //app.UseMiddleware<ErrorHandlerMiddleware>();
+        app.UseMiddleware<ErrorHandlerMiddleware>();
 
         using (var scope = app.Services.CreateScope())
         {
