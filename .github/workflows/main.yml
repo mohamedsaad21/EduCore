@@ -21,7 +21,7 @@ jobs:
 
       - name: Publish
         working-directory: ./src/EduCore.API
-        run: dotnet publish --configuration Release --output ./src/EduCore.API/publish --runtime win-x86 
+        run: dotnet publish --configuration Release --output ./publish --runtime win-x86 
         
       - name: Test with .NET
         working-directory: ./src/EduCore.API
@@ -34,3 +34,4 @@ jobs:
           server-computer-name: ${{ secrets.SERVER_COMPUTER_NAME }}
           server-username: ${{ secrets.SERVER_USERNAME }}
           server-password: ${{ secrets.SERVER_PASSWORD }}
+          source-path: '\src\EduCore.API\publish\'
