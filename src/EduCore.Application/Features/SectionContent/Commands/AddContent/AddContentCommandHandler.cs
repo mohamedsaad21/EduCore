@@ -27,9 +27,8 @@ public sealed class AddContentCommandHandler(IUnitOfWork unitOfWork, IFileServic
             Title = request.Title,
             Url = uploadResult.Url,
             PublicId = uploadResult.PublicId,
-            SectionId = request.SectionId,
-            ResourceType = request.ResourceType,
-            Duration = request.Duration
+            ResourceType = uploadResult.ResourceType,
+            SectionId = request.SectionId
         };
         await unitOfWork.Contents.AddAsync(content);
         course.NoOfLectures++;

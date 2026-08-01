@@ -26,7 +26,7 @@ public class ContentController : AppControllerBase
 
     [ServiceFilter(typeof(AuthFilter))]
     [HttpPost(Router.ContentRouting.Create)]
-    public async Task<IActionResult> CreateContent([FromBody] AddContentCommand command)
+    public async Task<IActionResult> CreateContent([FromForm] AddContentCommand command)
     {
         return ToActionResult(await Mediator.Send(command));
     }

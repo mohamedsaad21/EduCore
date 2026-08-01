@@ -8,7 +8,5 @@ public sealed record AddContentCommand
     (
         string Title,
         Guid SectionId,
-        IFormFile File,
-        string ResourceType,
-        double? Duration
+        IFormFile File
     ) : IRequest<Result<Guid>>;

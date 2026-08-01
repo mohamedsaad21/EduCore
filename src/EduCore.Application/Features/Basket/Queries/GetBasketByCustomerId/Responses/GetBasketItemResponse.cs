@@ -1,6 +1,6 @@
-﻿namespace EduCore.Application.Features.ShoppingCart.Queries.GetCartByCustomerId.Responses;
+﻿namespace EduCore.Application.Features.Basket.Queries.GetBasketByCustomerId.Responses;
 
-public class GetCartItemResponse
+public class GetBasketItemResponse
 {
     public Guid Id { get; set; }
     public Guid CartId { get; set; }

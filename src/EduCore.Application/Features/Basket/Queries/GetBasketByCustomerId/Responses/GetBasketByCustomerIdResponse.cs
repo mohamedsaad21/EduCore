@@ -1,10 +1,10 @@
-﻿namespace EduCore.Application.Features.ShoppingCart.Queries.GetCartByCustomerId.Responses
+﻿namespace EduCore.Application.Features.Basket.Queries.GetBasketByCustomerId.Responses
 {
-    public class GetCartByCustomerIdResponse
+    public class GetBasketByCustomerIdResponse
     {
         public Guid Id { get; set; }
-        public string CustomerId { get; set; }
-        public ICollection<GetCartItemResponse> CartItems { get; set; }
+        public Guid CustomerId { get; set; }
+        public ICollection<GetBasketItemResponse> BasketItems { get; set; }
         public decimal TotalBasePrice { get; set; }
         public decimal TotalDiscountPrice { get; set; }
         public decimal TotalPrice { get; set; }
