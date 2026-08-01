@@ -18,6 +18,7 @@ public class GetCoursesByInstructorIdPaginatedListResponse
     public int? NoOfLectures { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime? UpdatedAt { get; set; }
+    public Guid InstructorId { get; set; }
     public string InstructorName { get; set; }
     public string InstructorProfilePictureUrl { get; set; }
     public Guid CategoryId { get; set; }

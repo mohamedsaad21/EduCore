@@ -77,4 +77,5 @@ public static class Errors
     public static Error CourseAlreadyExistsInCart => new("CourseAlreadyExistsInCart", ErrorType.BadRequest, "This course is already exists in cart");
     public static Error NotActiveCartFound => new("NotActiveCartFound", ErrorType.NotFound, "There isn't any active cart found");
     public static Error CourseNotFoundInCart => new("CourseNotFoundInCart", ErrorType.NotFound, "This course is not found in cart");
+    public static Error AlreadyEnrolledInCourse => new("AlreadyEnrolledInCourse", ErrorType.NotFound, "You are already enrolled in this course");
 }

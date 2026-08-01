@@ -9,6 +9,7 @@ public class GetCoursesByCategoryIdPaginatedListResponse
     public decimal Price { get; set; }
     public int DiscountPercentage { get; set; }
     public string Status { get; set; }
+    public Guid InstructorId { get; set; }
     public string InstructorName { get; set; }
     public string InstructorProfilePictureUrl { get; set; }
     public double? AverageRating { get; set; }

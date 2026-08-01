@@ -19,7 +19,7 @@ public sealed class AddToBasketCommandHandler(IUnitOfWork unitOfWork, ICurrentUs
 
         // Check if user enrolled in course or not to prevent duplicate order for the same course
         var Enrolled = await enrollmentService.CheckEnrollmentAsync(course, user);
-        if (Enrolled) return Errors.NotEnrolledInCourse;
+        if (Enrolled) return Errors.AlreadyEnrolledInCourse;
 
         // Check if there's an active cart or not
         var cart = await unitOfWork.Baskets.GetTableAsTracking()
